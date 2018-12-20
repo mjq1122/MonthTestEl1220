@@ -45,7 +45,6 @@ public class RightAdapter extends RecyclerView.Adapter<RightAdapter.ChildHolder>
         final Goods goods = mList.get(position);
         childHolder.text.setText(goods.getTitle());
         childHolder.price.setText("单价：" + goods.getPrice());//单价
-
         String imageurl = "https" + goods.getImages().split("https")[1];
         Log.i("dt", "imageUrl: " + imageurl);
         imageurl = imageurl.substring(0, imageurl.lastIndexOf(".jpg") + ".jpg".length());
